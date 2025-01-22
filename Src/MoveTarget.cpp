@@ -3,15 +3,6 @@
 
 MoveTarget::MoveTarget(VECTOR3 vPos,Player* player):pl(player)
 {
-	auto list =ObjectManager::FindGameObjects<MoveTarget>();
-	
-	for (auto node : list)
-	{
-		if (node != this)
-		{
-			node->DestroyMe();
-		}
-	}
 	transform.position = vPos;
 	mesh = new CFbxMesh();
 	mesh->Load("data/models/MoveTarget/missile.mesh");

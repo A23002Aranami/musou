@@ -129,7 +129,14 @@ void Player::UpdateNormal()
 			
 			if ((cursolPos - this->Position()).Length() > 1.1f)
 			{
-				target = new MoveTarget(cursolPos, this);
+				if (!target) {//ターゲットが存在しなかったらインスタンス生成
+					target = new MoveTarget(cursolPos, this);
+				}
+				else
+				{
+					target->SetPosition(cursolPos);
+				}
+
 			}
 			
 			VECTOR3 toTarget = cursolPos - this->Position();
@@ -161,12 +168,14 @@ void Player::UpdateNormal()
 
 	}
 
-	if (target ) {
+	if (target) {
 
 		if (animator->PlayingID() != 0)
 		{
 			animator->MergePlay(aWalk);
 		}
+
+		//Todo[Aranami]:ここが重い処理かもしれないので、修正する
 		VECTOR3 toTarget = target->Position() - this->Position();
 		toTarget = XMVector3Normalize(toTarget);
 		toTarget *= 0.05;
