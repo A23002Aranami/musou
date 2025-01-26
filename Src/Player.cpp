@@ -126,27 +126,40 @@ void Player::UpdateNormal()
 		}
 		else
 		{
-			
-			if ((cursolPos - this->Position()).Length() > 1.1f)
+			if (currPos.y > 0.1f)//カーソルが地面から離れていた時
 			{
-				if (!target) {//ターゲットが存在しなかったらインスタンス生成
-					target = new MoveTarget(cursolPos, this);
-				}
-				else
+				//ToDo[aranami]:カーソルを罰点マークにする
+			}
+			else//カーソルが地面に触れているとき、移動ターゲットの設定をする
+			{
+				if ((cursolPos - this->Position()).Length() > 1.1f)
 				{
-					target->SetPosition(cursolPos);
+					if (!target) {//ターゲットが存在しなかったらインスタンス生成
+						target = new MoveTarget(cursolPos, this);
+					}
+					else
+					{
+						target->SetPosition(cursolPos);//ターゲットの位置を変更する
+					}
+
 				}
 
+				//移動ターゲットへ向かうベクトル
+				VECTOR3 toTarget = cursolPos - this->Position();
+
+				//ターゲットへ向かう向きへのキャラクターの向き
+				toRot = atan2(toTarget.x, toTarget.z);
+				//求めたローテーションへ向けるための時間をリセットする
+				count = 0;
+				//求めたローテーションへ向けるフレーム数
+				time = 30;
+				//滑らかに傾けるために、現在のローテーションをスタートの値として設定する
+				startRot = transform.rotation.y;
+				//
+				rot = toRot - startRot;
 			}
 			
-			VECTOR3 toTarget = cursolPos - this->Position();
-
-
-			toRot = atan2(toTarget.x, toTarget.z);
-			count = 0;
-			time = 30;
-			startRot = transform.rotation.y;
-			rot = toRot - startRot;
+			
 		}
 
 	}
