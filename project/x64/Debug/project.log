@@ -1,5 +1,11 @@
-﻿  Player.cpp
-C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Player.cpp(172,15): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
-C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Player.cpp(222,57): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Player.cpp(253,34): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
+﻿  EnemySoldier.cpp
+C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\EnemySoldier.cpp(94,21): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
+C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\EnemySoldier.cpp(177,69): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\EnemySoldier.cpp(181,12): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
+  MoveTarget.cpp
+  Player.cpp
+C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Player.cpp(181,15): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
+C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Player.cpp(231,57): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Player.cpp(262,34): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
+  コードを生成中...
   project.vcxproj -> C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\project.exe
