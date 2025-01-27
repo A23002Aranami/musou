@@ -52,5 +52,6 @@ protected:
 	virtual void UpdateContact();
 	virtual void UpdateFight();
 	virtual void UpdateKnockBack();
+	virtual void UpdateChase();
 
 };

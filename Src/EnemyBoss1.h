@@ -10,7 +10,6 @@ public:
 	EnemyBoss1();
 	~EnemyBoss1();
 
-	void Update() override;
 	void Draw()override;
 
 	int GetState();
@@ -21,7 +20,8 @@ public:
 
 protected:
 	void UpdateNormal() override;
-	void UpdateChase();
+	void UpdateChase()override;
+	void UpdateFight()override;
 
 	//25.01.09 T.Aranami í«â¡ÅFîzâ∫ÇÃåQÇÍ
 	std::list<EnemySoldier*> flock;

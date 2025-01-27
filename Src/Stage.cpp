@@ -66,5 +66,29 @@ Stage::Stage()
 
 	new EnemyVillage(VECTOR3(-20, 0, -20), VECTOR3(30, 0, 30), 250);
 
+	float mapSize = 200;
+	float mapCenter = mapSize / 2;
+	//¡–Ú‚Ì•ªŠ„ƒTƒCƒY(m)
+	float divide = 5;
+
 	
+	for (int i = 0; i <= mapSize; i+=divide)
+	{
+		start.push_back(VECTOR3(0 - mapCenter, 0.1f, i - mapCenter));
+		end.push_back(VECTOR3(0 + mapCenter, 0.1f, i - mapCenter));
+
+		start.push_back(VECTOR3(i - mapCenter, 0.1f, 0 - mapCenter));
+		end.push_back(VECTOR3(i - mapCenter, 0.1f, 0 + mapCenter));
+	}
+
+	
+}
+
+void Stage::Draw()
+{
+	CSprite spr;
+	for (int i = 0; i < start.size();i++)
+	{
+		spr.DrawLine3D(start[i], end[i],RGB(255,0,255));
+	}
 }

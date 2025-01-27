@@ -13,22 +13,6 @@ EnemyBoss1::~EnemyBoss1()
 	flock.clear();
 }
 
-void EnemyBoss1::Update()
-{
-	switch (state)
-	{
-	case Enemy::Normal:
-		UpdateNormal();
-		break;
-	case Enemy::Fight:
-		UpdateChase();
-		break;
-	case Enemy::Dead:
-		break;
-	default:
-		break;
-	}
-}
 
 void EnemyBoss1::Draw()
 {
@@ -95,4 +79,9 @@ void EnemyBoss1::UpdateChase()
 	{
 		state = Normal;
 	}
+}
+
+void EnemyBoss1::UpdateFight()
+{
+	UpdateChase();
 }

@@ -18,29 +18,7 @@ EnemySoldier::~EnemySoldier()
 
 void EnemySoldier::Update()
 {
-	//プレイヤーへ向かうベクトルを取得
-	toPlayer = player->Position() - this->Position();
-
-	switch (state)
-	{
-	case Normal:
-		UpdateNormal();
-		break;
-	case Contact:
-		UpdateContact();
-		break;
-	case Fight:
-		UpdateFight();
-		break;
-	case KnockBack:
-		UpdateKnockBack();
-		break;
-	case Dead:
-		break;
-	default:
-		break;
-	}
-
+	Enemy::Update();
 	
 	reactionCount++;
 }

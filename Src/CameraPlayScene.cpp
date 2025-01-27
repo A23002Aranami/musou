@@ -9,7 +9,7 @@ void CameraPlayScene::Update()
 	{
 		VECTOR3 offsetPos;
 
-		offsetPos = pl->Position() + VECTOR3(0, 15, 15);
+		offsetPos = pl->Position() + VECTOR3(0, 15, -15);
 
 		VECTOR3 toOffsetPos = offsetPos	 - this->Position();//オフセットポジションへ移動するベクトル
 		VECTOR3 toPlayerPos = pl->Position() - this->Position();
@@ -55,7 +55,7 @@ void CameraPlayScene::Update()
 CameraPlayScene::CameraPlayScene():camSpeed(0.015),lookSpeed(0.01)
 {
 	//カメラのポジション
-	transform.position = VECTOR3(0, 20, 10);
+	transform.position = VECTOR3(0, 15, -15);
 	//カメラの注視点
 	transform.rotation = VECTOR3(0, 0, 0);
 

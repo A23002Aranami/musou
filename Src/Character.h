@@ -14,6 +14,7 @@ public:
 	{
 		Normal,			//‘Ò‹@
 		Contact,		//˜A—
+		Chase,			//’ÇÕ
 		Fight,			//í“¬
 		Evasion,		//‰ñ”ğ
 		AttackLight,	//ãUŒ‚
