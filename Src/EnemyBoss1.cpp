@@ -1,8 +1,16 @@
 #include "EnemyBoss1.h"
+#include "Stage.h"
+
+class Stage;
 
 EnemyBoss1::EnemyBoss1():
 	Enemy::Enemy()//親クラスのコンストラクタを使う
 {
+	//ステージに自分の情報を登録する
+	stage = ObjectManager::FindGameObject<Stage>();
+	stage->SetBoss1(this);
+
+	//ボス個体なので体を大きくする
 	transform.scale *= 1.5;
 
 	state = Normal;

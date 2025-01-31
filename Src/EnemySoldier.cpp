@@ -135,12 +135,6 @@ void EnemySoldier::UpdateFight()
 					volume++;//計算する個体数
 					avgPos += node->Position();
 					avgVelo += node->velo;
-
-					if (toNode.Length() < socialDistance)
-					{
-						//離れるベクトル
-						avgLeave += (-toNode);
-					}
 				}
 			}
 		}
@@ -154,7 +148,7 @@ void EnemySoldier::UpdateFight()
 
 			VECTOR3 toAvgPos(XMVector3Normalize(avgPos - this->Position()) * 0.01);
 			//速度を求めたベクトルの合計にする
-			velo = (avgVelo * 1.5 + toAvgPos)+avgLeave;
+			velo = (avgVelo * 1.5 + toAvgPos);
 			velo = XMVector3Normalize(velo);
 			velo *= 0.01;
 		}
@@ -165,19 +159,5 @@ void EnemySoldier::UpdateFight()
 	transform.rotation.y = atan2(velo.x, velo.z);
 	velo.y = 0;
 	transform.position += velo;
-
-	for (auto node : *boss->GetFlock())
-	{
-		auto toNode = node->Position() - this->Position();
-		auto length = toNode.Length();
-
-		if (length < 1.0)
-		{
-			toNode = XMVector3Normalize(toNode);
-			transform.position += -toNode * (1.0f - length);
-		}
-	}
-
-	
 
 }

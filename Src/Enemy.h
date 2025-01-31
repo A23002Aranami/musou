@@ -5,6 +5,7 @@
 #include "ExclEffect.h"
 
 class Player;
+class Stage;
 
 class Enemy : public Character
 {
@@ -34,6 +35,8 @@ protected:
 	//ノックバック時の速度
 	VECTOR3 knockBackVelo;
 
+	//ステージのポインタ
+	static Stage* stage;
 	static Player* player;
 	static CFbxMesh* enemyMesh;
 	static int num;//エネミーの人数

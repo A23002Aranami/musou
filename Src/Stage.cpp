@@ -92,3 +92,13 @@ void Stage::Draw()
 		spr.DrawLine3D(start[i], end[i],RGB(255,0,255));
 	}
 }
+
+void Stage::SetBoss1(EnemyBoss1* boss)
+{
+	boss1.push_back(boss);
+}
+
+std::list<EnemyBoss1*>* Stage::GetBoss1()
+{
+	return &boss1;
+}

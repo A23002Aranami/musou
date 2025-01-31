@@ -1,5 +1,4 @@
-﻿  Player.cpp
-C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Player.cpp(188,15): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
-C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Player.cpp(238,57): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Player.cpp(269,34): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
+﻿  EnemyBoss1.cpp
+C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\EnemyBoss1.cpp(28,40): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\EnemyBoss1.cpp(83,27): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
   project.vcxproj -> C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\project.exe

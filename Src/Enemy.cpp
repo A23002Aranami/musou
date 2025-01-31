@@ -1,4 +1,5 @@
 #include "Enemy.h"
+#include "Stage.h"
 
 namespace
 {
@@ -7,9 +8,12 @@ namespace
 
 }
 
+class Stage;
+
 Player* Enemy::player = nullptr; // 静的メンバ変数の定義
 
 CFbxMesh* Enemy::enemyMesh = nullptr;
+Stage* Enemy::stage = nullptr;
 int Enemy::num = 0;
 
 Enemy::Enemy():state(Normal),knockBackVelo(VECTOR3(0,0,0))
@@ -18,6 +22,7 @@ Enemy::Enemy():state(Normal),knockBackVelo(VECTOR3(0,0,0))
 
 	//クラス内共通のメンバがnullptrの時のみ設定する
 	if (!player) player = ObjectManager::FindGameObject<Player>();
+	if (!stage) stage = ObjectManager::FindGameObject<Stage>(); 
 
 	if (!enemyMesh)
 	{
@@ -27,6 +32,7 @@ Enemy::Enemy():state(Normal),knockBackVelo(VECTOR3(0,0,0))
 		enemyMesh->LoadAnimation(Dance, "data/models/Enemy/Gob/Dance.anmx", true);
 
 	}
+	
 
 	mesh = enemyMesh;
 	//プレイヤーのエネミーリストに自分を追加
@@ -93,6 +99,24 @@ void Enemy::Update()
 		break;
 	}
 
+	if (state != Dead)
+	{
+		//すべてのボスのすべての配下とヒット判定
+		for (auto boss : *stage->GetBoss1())
+		{
+			for (auto node : *boss->GetFlock())
+			{
+				auto toNode = node->Position() - this->Position();
+				auto length = toNode.Length();
+
+				if (length < 1.0)
+				{
+					toNode = XMVector3Normalize(toNode);
+					transform.position += -toNode * (1.0f - length);
+				}
+			}
+		}
+	}
 }
 
 void Enemy::Draw()
