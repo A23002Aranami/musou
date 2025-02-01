@@ -5,7 +5,8 @@ MoveTarget::MoveTarget(VECTOR3 vPos,Player* player):pl(player)
 {
 	transform.position = vPos;
 	mesh = new CFbxMesh();
-	mesh->Load("data/models/MoveTarget/missile.mesh");
+	transform.scale * 2;
+	mesh->Load("data/models/MoveTarget/Mark.mesh");
 }
 
 MoveTarget::~MoveTarget()

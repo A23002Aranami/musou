@@ -1,4 +1,32 @@
-﻿  EnemyBoss1.cpp
-C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\EnemyBoss1.cpp(28,40): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
-C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\EnemyBoss1.cpp(83,27): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
+﻿  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceSkinMesh_DS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceSkinMesh_HS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceSkinMesh_PS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceSkinMesh_VS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceStaticMesh_DS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceStaticMesh_HS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceStaticMesh_PS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceStaticMesh_VS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceWave_DS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceWave_HS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceWave_PS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\DisplaceWave_VS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Effect3D_GS_POINT.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Effect3D_PS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Effect3D_VS_BILL.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Effect3D_VS_BILLMESH.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Effect3D_VS_POINT.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\FbxSkinMesh_PS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\FbxSkinMesh_VS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\FbxStaticMesh_PS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\FbxStaticMesh_VS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Simple_PS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Simple_VS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Sprite3D_PS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Sprite3D_VS.cso
+  compilation object save succeeded; see C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\Sprite3D_VS_BILL.cso
+  Enemy.cpp
+C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\Src\Enemy.cpp(157,26): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+  MoveTarget.cpp
+  コードを生成中...
+  LINK : 前回のインクリメンタル リンクで C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\project.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
   project.vcxproj -> C:\Users\A23002\Desktop\ForClassroom\ゲーム制作\無双ゲーム（仮）\x64\Debug\project.exe
