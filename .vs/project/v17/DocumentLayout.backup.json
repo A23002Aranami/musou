@@ -1,0 +1,566 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyBoss1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\EnemyBoss1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Stage.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Stage.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyBoss1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\EnemyBoss1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Stage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Stage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\ObjectManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\ObjectManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\StageData.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\StageData.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemySoldier.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\EnemySoldier.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyVillage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\EnemyVillage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Character.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Character.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemySoldier.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\EnemySoldier.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\CameraPlayScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\CameraPlayScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\CameraPlayScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\CameraPlayScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\MoveTarget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\MoveTarget.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Object3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Object3D.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyVillage.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\EnemyVillage.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\PlayScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\PlayScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\MoveTarget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\MoveTarget.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\ExclEffect.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\ExclEffect.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Lerp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Lerp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Animator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Animator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\ExclEffect.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\ExclEffect.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\FbxMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\FbxMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\GameMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\GameMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\PlayScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\PlayScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\StaticObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\StaticObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\GameMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\GameMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Lerp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C277B78C-CCEF-4617-A5A8-77FA17C26BBB}|project.vcxproj|solutionrelative:Src\\Lerp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\include\\list||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 244,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Player.cpp",
+              "RelativeDocumentMoniker": "Src\\Player.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Player.cpp",
+              "RelativeToolTip": "Src\\Player.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-12T07:36:44.421Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Enemy.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Enemy.cpp",
+              "RelativeDocumentMoniker": "Src\\Enemy.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Enemy.cpp",
+              "RelativeToolTip": "Src\\Enemy.cpp",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAGUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-17T05:24:49.748Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Stage.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Stage.cpp",
+              "RelativeDocumentMoniker": "Src\\Stage.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Stage.cpp",
+              "RelativeToolTip": "Src\\Stage.cpp",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAGYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T04:59:58.792Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyBoss1.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyBoss1.cpp",
+              "RelativeDocumentMoniker": "Src\\EnemyBoss1.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyBoss1.cpp",
+              "RelativeToolTip": "Src\\EnemyBoss1.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-18T03:08:56.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FbxMesh.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\FbxMesh.cpp",
+              "RelativeDocumentMoniker": "Src\\FbxMesh.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\FbxMesh.cpp",
+              "RelativeToolTip": "Src\\FbxMesh.cpp",
+              "ViewState": "AQIAAJ0EAAAAAAAAAAApwKkEAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T01:23:30.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PlayScene.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\PlayScene.cpp",
+              "RelativeDocumentMoniker": "Src\\PlayScene.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\PlayScene.cpp",
+              "RelativeToolTip": "Src\\PlayScene.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T13:23:41.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ObjectManager.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\ObjectManager.h",
+              "RelativeDocumentMoniker": "Src\\ObjectManager.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\ObjectManager.h",
+              "RelativeToolTip": "Src\\ObjectManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-29T01:22:27.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GameMain.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\GameMain.h",
+              "RelativeDocumentMoniker": "Src\\GameMain.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\GameMain.h",
+              "RelativeToolTip": "Src\\GameMain.h",
+              "ViewState": "AQIAAAcAAAAAAAAAAADgvxAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-09T01:06:02.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ExclEffect.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\ExclEffect.cpp",
+              "RelativeDocumentMoniker": "Src\\ExclEffect.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\ExclEffect.cpp",
+              "RelativeToolTip": "Src\\ExclEffect.cpp",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAAAwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-21T00:21:23.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "list",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\include\\list",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\include\\list",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\include\\list",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\include\\list",
+              "ViewState": "AQIAAEQEAAAAAAAAAAAawE4EAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-18T02:56:31.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CameraPlayScene.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\CameraPlayScene.cpp",
+              "RelativeDocumentMoniker": "Src\\CameraPlayScene.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\CameraPlayScene.cpp",
+              "RelativeToolTip": "Src\\CameraPlayScene.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T00:45:04.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EnemyVillage.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyVillage.cpp",
+              "RelativeDocumentMoniker": "Src\\EnemyVillage.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyVillage.cpp",
+              "RelativeToolTip": "Src\\EnemyVillage.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-18T00:58:32.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Object3D.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Object3D.cpp",
+              "RelativeDocumentMoniker": "Src\\Object3D.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Object3D.cpp",
+              "RelativeToolTip": "Src\\Object3D.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T01:57:30.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "GameMain.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\GameMain.cpp",
+              "RelativeDocumentMoniker": "Src\\GameMain.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\GameMain.cpp",
+              "RelativeToolTip": "Src\\GameMain.cpp",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T01:57:39.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Character.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Character.cpp",
+              "RelativeDocumentMoniker": "Src\\Character.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Character.cpp",
+              "RelativeToolTip": "Src\\Character.cpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T06:41:30.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Animator.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Animator.cpp",
+              "RelativeDocumentMoniker": "Src\\Animator.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Animator.cpp",
+              "RelativeToolTip": "Src\\Animator.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-10T06:58:52.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StageData.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\StageData.h",
+              "RelativeDocumentMoniker": "Src\\StageData.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\StageData.h",
+              "RelativeToolTip": "Src\\StageData.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-10T02:00:58.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EnemySoldier.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemySoldier.cpp",
+              "RelativeDocumentMoniker": "Src\\EnemySoldier.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemySoldier.cpp",
+              "RelativeToolTip": "Src\\EnemySoldier.cpp",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAiwKEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-30T00:33:05.044Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 156,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Player.h",
+              "RelativeDocumentMoniker": "Src\\Player.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Player.h",
+              "RelativeToolTip": "Src\\Player.h",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAADQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-10T07:36:20.373Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Stage.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Stage.h",
+              "RelativeDocumentMoniker": "Src\\Stage.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Stage.h",
+              "RelativeToolTip": "Src\\Stage.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAnwAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-10T02:25:39.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enemy.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Enemy.h",
+              "RelativeDocumentMoniker": "Src\\Enemy.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Enemy.h",
+              "RelativeToolTip": "Src\\Enemy.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-17T05:00:23.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnemyBoss1.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyBoss1.h",
+              "RelativeDocumentMoniker": "Src\\EnemyBoss1.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyBoss1.h",
+              "RelativeToolTip": "Src\\EnemyBoss1.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-18T03:07:50.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EnemyVillage.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyVillage.h",
+              "RelativeDocumentMoniker": "Src\\EnemyVillage.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemyVillage.h",
+              "RelativeToolTip": "Src\\EnemyVillage.h",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-17T06:35:36.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Character.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Character.h",
+              "RelativeDocumentMoniker": "Src\\Character.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Character.h",
+              "RelativeToolTip": "Src\\Character.h",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-08T02:18:22.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Lerp.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Lerp.h",
+              "RelativeDocumentMoniker": "Src\\Lerp.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Lerp.h",
+              "RelativeToolTip": "Src\\Lerp.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-17T03:26:00.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ExclEffect.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\ExclEffect.h",
+              "RelativeDocumentMoniker": "Src\\ExclEffect.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\ExclEffect.h",
+              "RelativeToolTip": "Src\\ExclEffect.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T03:35:59.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnemySoldier.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemySoldier.h",
+              "RelativeDocumentMoniker": "Src\\EnemySoldier.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\EnemySoldier.h",
+              "RelativeToolTip": "Src\\EnemySoldier.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-30T00:25:45.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MoveTarget.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\MoveTarget.cpp",
+              "RelativeDocumentMoniker": "Src\\MoveTarget.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\MoveTarget.cpp",
+              "RelativeToolTip": "Src\\MoveTarget.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAUwB8AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-17T00:56:26.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Lerp.cpp",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Lerp.cpp",
+              "RelativeDocumentMoniker": "Src\\Lerp.cpp",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\Lerp.cpp",
+              "RelativeToolTip": "Src\\Lerp.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-17T03:30:59.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PlayScene.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\PlayScene.h",
+              "RelativeDocumentMoniker": "Src\\PlayScene.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\PlayScene.h",
+              "RelativeToolTip": "Src\\PlayScene.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-18T09:42:01.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MoveTarget.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\MoveTarget.h",
+              "RelativeDocumentMoniker": "Src\\MoveTarget.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\MoveTarget.h",
+              "RelativeToolTip": "Src\\MoveTarget.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-17T00:52:58.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "StaticObject.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\StaticObject.h",
+              "RelativeDocumentMoniker": "Src\\StaticObject.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\StaticObject.h",
+              "RelativeToolTip": "Src\\StaticObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-10T05:44:27.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CameraPlayScene.h",
+              "DocumentMoniker": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\CameraPlayScene.h",
+              "RelativeDocumentMoniker": "Src\\CameraPlayScene.h",
+              "ToolTip": "C:\\Users\\A23002\\Desktop\\ForClassroom\\\u30B2\u30FC\u30E0\u5236\u4F5C\\\u7121\u53CC\u30B2\u30FC\u30E0\uFF08\u4EEE\uFF09\\Src\\CameraPlayScene.h",
+              "RelativeToolTip": "Src\\CameraPlayScene.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-10T05:58:13.813Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -99,20 +99,24 @@ void Enemy::Update()
 		break;
 	}
 
-	if (state != Dead)
+	if ((this->state != Dead) && (this->state != KnockBack))
 	{
 		//すべてのボスのすべての配下とヒット判定
 		for (auto boss : *stage->GetBoss1())
 		{
 			for (auto node : *boss->GetFlock())
 			{
-				auto toNode = node->Position() - this->Position();
-				auto length = toNode.Length();
-
-				if (length < 1.0)
+				//対象が動ける状態であるとき
+				if ((node->state != Dead) && (node->state != KnockBack))
 				{
-					toNode = XMVector3Normalize(toNode);
-					transform.position += -toNode * (1.0f - length);
+					auto toNode = node->Position() - this->Position();
+					auto length = toNode.Length();
+
+					if (length < 1.0)
+					{
+						toNode = XMVector3Normalize(toNode);
+						transform.position += -toNode * (1.0f - length);
+					}
 				}
 			}
 		}

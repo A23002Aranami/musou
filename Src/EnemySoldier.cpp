@@ -89,11 +89,6 @@ void EnemySoldier::UpdateFight()
 {
 	animator->Update();
 
-	/*
-	//群れ
-	auto flock = ObjectManager::FindGameObjects<EnemySoldier>();
-	*/
-
 	if (reactionTime < reactionCount)
 	{
 		reactionTime = Random(10, 20);
@@ -114,10 +109,6 @@ void EnemySoldier::UpdateFight()
 			volume++;
 			avgPos += boss->Position();
 			avgVelo += boss->GetVelo();
-			if ((boss->Position() - this->Position()).Length() < socialDistance)
-			{
-				avgLeave += (this->Position() - boss->Position());
-			}
 		}
 
 		for (auto node : *boss->GetFlock())
@@ -138,7 +129,7 @@ void EnemySoldier::UpdateFight()
 				}
 			}
 		}
-		//近くにいた場合
+		//近く仲間がにいた場合
 		if (volume > 0)
 		{
 			//個体数で割って平均を出す
@@ -153,9 +144,43 @@ void EnemySoldier::UpdateFight()
 			velo *= 0.01;
 		}
 
+		//自分の視界内に仲間がいた場合
+		if (toPlayer.Length() <= 5.0f)
+		{
+			//プレイヤーへ向かうベクトルを正規化
+			VECTOR3 toVec = XMVector3Normalize(toPlayer);
+			toVec *= 0.01f;
+
+			//プレイヤーへ向かう割合の調整
+			toVec * 2;
+
+			//速度の要素にプレイヤーへ向かうベクトルも混ぜる
+			velo += toVec;
+			velo /= 2;
+
+		}
+
 		
 	}
-
+	
+	//動いていないなら、アニメーションをダンスにする
+	if (velo.Length() <= 0)
+	{
+		if (animator->PlayingID() != Dance)
+		{
+			animator->MergePlay(Dance);
+		}
+	}
+	else
+	{
+		//キャラクターが動いているときにアニメーションが歩いていなかったら歩かせる
+		if (animator->PlayingID() != Walk)
+		{
+			animator->MergePlay(Walk);
+		}
+	}
+	
+	
 	transform.rotation.y = atan2(velo.x, velo.z);
 	velo.y = 0;
 	transform.position += velo;
