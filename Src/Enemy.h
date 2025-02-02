@@ -44,6 +44,8 @@ protected:
 	float reactionTime;//反応時間
 	float reactionCount;//反応のカウント
 
+	int coolTime;//クールタイム
+	int coolCount;//クールカウント
 	
 	enum Animation
 	{

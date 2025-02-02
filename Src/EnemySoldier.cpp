@@ -19,6 +19,7 @@ EnemySoldier::~EnemySoldier()
 
 void EnemySoldier::Update()
 {
+	//親クラスのアップデートを呼ぶ
 	Enemy::Update();
 	
 	reactionCount++;
@@ -36,15 +37,24 @@ void EnemySoldier::UpdateNormal()
 	//アニメーションアップデート
 	animator->Update();
 	
+	//ボスが戦闘モードだったら
 	if (boss->GetState() == Fight)
 	{
-		state = Contact;
+		state = Contact;	//状態を連絡状態に変更
 	}
-	else
+	else//ボスが戦闘モードじゃなかったら
 	{
+		//プレイヤーへ向かうベクトルを取得
 		VECTOR3 forward = VECTOR3(0, 0, 1) * XMMatrixRotationY(transform.rotation.y);
+		
 		float ipF = Dot(forward, toPlayer);
-		if (toPlayer.Length() < 5.0f) {
+	
+		//追いかける距離
+		float chaseRange = 5.0f;
+
+		//プレイヤーとの距離が一定以下のとき
+		if (toPlayer.Length() < chaseRange) {
+			//視界範囲内であれば
 			if (ipF >= cosf(60.0f * DegToRad))
 			{
 				new ExclEffect(this);
@@ -57,24 +67,28 @@ void EnemySoldier::UpdateNormal()
 
 void EnemySoldier::UpdateContact()
 {
+	//ボスが存在していたら
 	if (boss) {
 		animator->MergePlay(Walk);
 		animator->Update();
 
+		//ボスへ向かうベクトルを取得
 		VECTOR3 toBoss = (boss->Position() - this->Position());
 
 		if ((boss->GetState() != Fight) )//ボスが戦闘モードじゃなかったら
 		{
-			
+			//ボスへの距離が一定以上のとき
 			if (toBoss.Length() > 2.0f)
 			{
+				//ボスへ向かうベクトルを正規化
 				toBoss = XMVector3Normalize(toBoss);
+				//自分の向きをボスに向かせる
 				transform.rotation.y = atan2(toBoss.x, toBoss.z);
 				velo = toBoss * 0.01;
 			}
 			else
 			{
-				//state = Normal;
+				state = Fight;
 			}
 		}
 		else

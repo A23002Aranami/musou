@@ -82,24 +82,24 @@ void Enemy::Update()
 
 	switch (state)
 	{
-	case Normal:
+	case Normal:			//通常状態
 		UpdateNormal();
 		break;
-	case Contact:
+	case Contact:			//接触状態
 		UpdateContact();
 		break;
-	case Chase:
+	case Chase:				//追跡状態
 		UpdateChase();
 		break;
-	case Fight:
+	case Fight:				//戦闘状態
 		UpdateFight();
 		break;
-	case KnockBack:
+	case KnockBack:			//ノックバック状態
 		UpdateKnockBack();
 		break;
-	case Dead:
+	case Dead:				//死亡状態
 		break;
-	default:
+	default:				//その他
 		break;
 	}
 
@@ -116,6 +116,7 @@ void Enemy::Update()
 					auto toNode = node->Position() - this->Position();
 					auto length = toNode.Length();
 
+					//距離が一定以下のとき
 					if (length < 1.0)
 					{
 						//当たった仲間を押し出す
@@ -123,6 +124,7 @@ void Enemy::Update()
 						toNode.y = 0;
 						node->SetPosition(node->Position() + toNode * (1.0f - length));
 					}
+					
 				}
 			}
 		}
@@ -131,6 +133,7 @@ void Enemy::Update()
 
 void Enemy::Draw()
 {
+	//プレイヤーとの距離が描画距離以内であり、死亡状態でないとき描画する
 	if ( (player && toPlayer.Length() < ableLength) && state != Dead)
 	{
 		Object3D::Draw();
