@@ -25,7 +25,7 @@ PlayScene::PlayScene()
 		}
 	);
 
-	new StageData();
+	//new StageData();
 	new CameraPlayScene();
 	new Stage();
 	

@@ -6,15 +6,19 @@
 #include "Lerp.h"
 #include "MeshCollider.h"
 
+
 Player::Player() :
-	cam(nullptr),
-	target(nullptr),
-	doubleTapCount(10),
-	doubleTapTime(10),
-	invincibleCount(0),
-	invincibleTime(60),
-	attackRangeLight(3.0f),
-	attackKnockBackHeightLight(0.1f)
+	cam(nullptr),					//カメラ
+	target(nullptr),				//移動先ターゲットc
+	doubleTapCount(10),				//ダブルタップ判定用カウント　
+	doubleTapTime(10),				//ダブルタップの許容時間
+	invincibleCount(0),				//無敵時間のカウント　
+	invincibleTime(60),				//無敵時間
+	countAttackFrame(0),			//攻撃発生からの総フレーム
+	attackRangeLight(3.0f),			//攻撃範囲(距離)
+	attackAngleLight(60.0f),		//攻撃範囲(角度)
+	attackFrameLight(5),			//攻撃フレーム
+	attackKnockBackHeightLight(0.1f)//ノックバックする高さ
 {
 	//描画順を遅くする
 	ObjectManager::SetDrawOrder(this, -1000);
@@ -34,6 +38,7 @@ Player::~Player()
 	SAFE_DELETE(mesh);
 	SAFE_DELETE(cursolImg);
 	SAFE_DELETE(sword);
+	SAFE_DELETE(animator);
 	GameDevice()->m_pDI->ShowMouseCursor(true);
 }
 
@@ -109,6 +114,7 @@ void Player::UpdateNormal()
 {
 	auto di = GameDevice()->m_pDI;//入力
 
+	//進む向きへ向いている割合(最初　は100%)
 	float rotRate = 1.0f;
 
 	doubleTapCount++;
@@ -222,25 +228,43 @@ void Player::UpdateNormal()
 
 void Player::UpdateAttackLight()
 {
-	
-	if (!enemys.empty())
+	//攻撃フレーム加算
+	countAttackFrame++;
+
+	//攻撃有効フレーム内であれば敵に攻撃をヒットさせる
+	if (countAttackFrame <= attackFrameLight)
 	{
-		for (auto enemy : enemys)
+		if (!enemys.empty())
 		{
-			if (enemy->toPlayer.Length() <= attackRangeLight)
+			for (auto enemy : enemys)
 			{
-				//敵のステート
-				int eState = enemy->state;
-				//敵がノックバックしても死んでもいないとき
-				if ( (eState != KnockBack) && (eState != Dead))
+				if (enemy->toPlayer.Length() <= attackRangeLight)
 				{
-					VECTOR3 KnockBack;
-					KnockBack = XMVector3Normalize(-(enemy->toPlayer))*0.02;
-					KnockBack.y = attackKnockBackHeightLight;
-					enemy->SetKnockBackVelo( KnockBack );
+					//敵のステート
+					int eState = enemy->state;
+					//敵がノックバックしても死んでもいないとき
+					if ((eState != KnockBack) && (eState != Dead))
+					{
+						//ToDo[Aranami]:攻撃範囲と攻撃フレームの実装
+
+						//y軸の回転行列
+						MATRIX4X4 rotY = XMMatrixRotationY(transform.rotation.y);
+						//プレイヤーの前方ベクトル
+						VECTOR3 forward = VECTOR3(0, 0, 1) * rotY;
+						float ipF = Dot(forward, -(enemy->toPlayer));
+
+						//相手が扇状攻撃範囲内にいたらノックバックさせる
+						if (ipF >= cosf(attackAngleLight * DegToRad))
+						{
+							VECTOR3 KnockBack;
+							KnockBack = XMVector3Normalize(-(enemy->toPlayer)) * 0.02;
+							KnockBack.y = attackKnockBackHeightLight;
+							enemy->SetKnockBackVelo(KnockBack);
+						}
+					}
 				}
+
 			}
-			
 		}
 	}
 	
@@ -248,6 +272,8 @@ void Player::UpdateAttackLight()
 	//アニメーションが終わったら通常に戻す
 	if (animator->Finished())
 	{
+		//攻撃フレームを初期化する
+		countAttackFrame = 0;
 		state = Normal;
 
 	}
@@ -282,10 +308,6 @@ void Player::UpdateEvation()
 
 VECTOR3 Player::GetCursolPos()
 {
-
-	MeshCollider::CollInfo targetInfo;
-	targetInfo.hitPosition = this->Position();//ターゲットを自分の位置で初期化
-
 	VECTOR3 start = cam->Position();
 
 	//カーソルの座標をワールド座標に変換したものを判定の終わりの座標にする
@@ -300,7 +322,8 @@ VECTOR3 Player::GetCursolPos()
 		GameDevice()->m_mProj, GameDevice()->m_mView, XMMatrixIdentity()
 	);
 
-
+	MeshCollider::CollInfo targetInfo;
+	targetInfo.hitPosition = this->Position();//ターゲットを自分の位置で初期化
 	//ターゲットポジションを初期化
 	ObjectManager::FindGameObject<StaticObject>()->HitLineToMesh(start, end, &targetInfo);
 

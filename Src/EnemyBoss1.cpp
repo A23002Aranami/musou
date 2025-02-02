@@ -18,6 +18,7 @@ EnemyBoss1::EnemyBoss1():
 
 EnemyBoss1::~EnemyBoss1()
 {
+	Enemy::~Enemy();
 	flock.clear();
 }
 

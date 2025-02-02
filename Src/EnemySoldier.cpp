@@ -13,6 +13,7 @@ EnemySoldier::EnemySoldier(EnemyBoss1* vBoss):Enemy()
 
 EnemySoldier::~EnemySoldier()
 {
+	Enemy::~Enemy();
 	boss = nullptr;
 }
 
@@ -47,7 +48,7 @@ void EnemySoldier::UpdateNormal()
 			if (ipF >= cosf(60.0f * DegToRad))
 			{
 				new ExclEffect(this);
-				animator->MergePlay(0);
+				animator->MergePlay(Walk);
 				state = Contact;
 			}
 		}
@@ -57,7 +58,7 @@ void EnemySoldier::UpdateNormal()
 void EnemySoldier::UpdateContact()
 {
 	if (boss) {
-		animator->MergePlay(0);
+		animator->MergePlay(Walk);
 		animator->Update();
 
 		VECTOR3 toBoss = (boss->Position() - this->Position());
@@ -98,12 +99,10 @@ void EnemySoldier::UpdateFight()
 
 		VECTOR3 avgPos = VECTOR3();//W’c‚ÌˆÊ’u‚Ì•½‹Ï				(Œ‹‡—p)
 		VECTOR3 avgVelo = VECTOR3();//W’c‚Ì‘¬“x‚Ì•½‹Ï(Œü‚«A‘¬‚³)	(®—ñ—p)
-		VECTOR3 avgLeave = VECTOR3();//‹ß‚Ã‚«‚·‚¬‚½‚ç—£‚ê‚é—Í‚Ì•½‹Ï	(•ª—£—p)
 
 		float sight = 10;//Ž‹ŠE
 		float volume = 0;		//Ž‹ŠE“à‚ÌŒÂ‘Ì”
-		float socialDistance = 1;
-
+		
 		if ((boss->Position() - this->Position()).Length() < sight)
 		{
 			volume++;

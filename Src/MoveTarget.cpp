@@ -19,6 +19,9 @@ MoveTarget::~MoveTarget()
 
 void MoveTarget::Update()
 {
+	//回す
+	transform.rotation.y += 1 * DegToRad;
+
 	float length = (this->Position() - pl->Position()).Length();
 
 	//ターゲットプレイヤーがたどり着いたら消す

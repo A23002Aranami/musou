@@ -3,7 +3,6 @@
 
 Character::Character()
 {
-	animator = new Animator;
 }
 
 Character::~Character()

@@ -67,6 +67,7 @@ Enemy::~Enemy()
 		delete enemyMesh;
 		player = nullptr;
 	}
+	SAFE_DELETE(animator);
 	//l”‚ğŒ¸Z
 	num--;
 }
@@ -114,8 +115,10 @@ void Enemy::Update()
 
 					if (length < 1.0)
 					{
+						//“–‚½‚Á‚½’‡ŠÔ‚ğ‰Ÿ‚µo‚·
 						toNode = XMVector3Normalize(toNode);
-						transform.position += -toNode * (1.0f - length);
+						toNode.y = 0;
+						node->SetPosition(node->Position() + toNode * (1.0f - length));
 					}
 				}
 			}

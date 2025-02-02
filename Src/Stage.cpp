@@ -9,6 +9,7 @@ Stage::Stage()
 
 	try
 	{
+
 		//ファイルから読み込んだ行数が0以下だった場合はエラー
 		if (csv->GetLines() <= 0)
 		{
@@ -30,12 +31,14 @@ Stage::Stage()
 						StaticObject* stObj = new StaticObject();
 						stObj->SetMesh(csv->GetString(i, 7).c_str());//文字列からファイルを指定してメッシュをロード
 						obj = stObj;//
+
 					}
 					if (csv->GetString(i, 0) == "Player")
 					{
 						Player* player = new Player();
 						player->SetMesh(csv->GetString(i, 7).c_str());//文字列からファイルを指定してメッシュをロード
 						obj = player;
+
 					}
 
 					//オブジェクトの座標受け取り
@@ -80,8 +83,14 @@ Stage::Stage()
 		start.push_back(VECTOR3(i - mapCenter, 0.1f, 0 - mapCenter));
 		end.push_back(VECTOR3(i - mapCenter, 0.1f, 0 + mapCenter));
 	}
+	SAFE_DELETE(csv);
+}
 
-	
+Stage::~Stage()
+{
+	start.clear();
+	end.clear();
+	boss1.clear();
 }
 
 void Stage::Draw()

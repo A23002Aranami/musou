@@ -10,6 +10,7 @@ class Stage : public GameObject
 {
 public:
 	Stage();
+	virtual ~Stage();
 	void Draw()override;
 
 	void SetBoss1(EnemyBoss1* boss);

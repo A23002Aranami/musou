@@ -61,8 +61,16 @@ private:
 
 	VECTOR3 GetCursolPos();
 
-	//ãUŒ‚‚ÌUŒ‚”ÍˆÍ
+	//UŒ‚”­¶‚©‚ç‚ÌƒtƒŒ[ƒ€
+	int countAttackFrame;
+
+	//ãUŒ‚‚ÌUŒ‚”ÍˆÍ(‹——£)
 	float attackRangeLight;
+	//ãUŒ‚‚ÌUŒ‚”ÍˆÍ(Šp“x)
+	float attackAngleLight;
+	//ãUŒ‚‚ÌUŒ‚ƒtƒŒ[ƒ€
+	int attackFrameLight;
+
 	//ãUŒ‚‚ÌƒmƒbƒNƒoƒbƒN
 	float attackKnockBackHeightLight;
 
