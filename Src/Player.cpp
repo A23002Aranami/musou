@@ -236,6 +236,7 @@ void Player::UpdateAttackLight()
 	{
 		if (!enemys.empty())
 		{
+			//“G‚ÌƒŠƒXƒg‚ð’Tõ‚·‚é
 			for (auto enemy : enemys)
 			{
 				if (enemy->toPlayer.Length() <= attackRangeLight)

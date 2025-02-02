@@ -50,6 +50,7 @@ Enemy::Enemy():state(Normal),knockBackVelo(VECTOR3(0,0,0))
 	animator->SetModel(mesh);
 
 	animator->Play(Dance);
+	//プレイスピードを等速で初期化
 	animator->SetPlaySpeed(1.0f);
 
 	//開始時の向きをランダムで設定
@@ -64,9 +65,11 @@ Enemy::~Enemy()
 
 	if (num == 1)//リソースがデリートされていないときデリートする
 	{
-		delete enemyMesh;
-		player = nullptr;
+		delete enemyMesh;//敵全体で共通のメッシュをデリート
+		player = nullptr;//プレイヤーの共通ポインタをデリート
+		stage = nullptr;//ステージの共通ポインタをデリート
 	}
+	//アニメーターのデリート
 	SAFE_DELETE(animator);
 	//人数を減算
 	num--;
