@@ -58,5 +58,9 @@ protected:
 	virtual void UpdateFight();
 	virtual void UpdateKnockBack();
 	virtual void UpdateChase();
+	virtual void UpdateAttackLight();
+
+	//UŒ‚”ÍˆÍ‚ÌƒƒbƒVƒ…
+	static CFbxMesh* rangeMesh;
 
 };

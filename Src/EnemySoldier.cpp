@@ -8,6 +8,18 @@ EnemySoldier::EnemySoldier(EnemyBoss1* vBoss):Enemy()
 	boss = vBoss;
 	velo = VECTOR3(0, 0, 0);
 
+	attackFrame = 0;
+
+	attackFrameLight = 120.0f;
+
+	//攻撃範囲の初期化
+	attackLength = 1.0f;
+	attackRange = 2.0f;
+
+	//攻撃のクールタイム
+	coolTime = 60;
+	coolCount = 0;
+
 	boss->AddFlock(this);
 }
 
@@ -22,7 +34,35 @@ void EnemySoldier::Update()
 	//親クラスのアップデートを呼ぶ
 	Enemy::Update();
 	
+	if (coolTime > 0)//クールタイムが0以上のとき
+	{
+		coolCount--;
+	}
 	reactionCount++;
+}
+
+void EnemySoldier::Draw()
+{
+	Enemy::Draw();
+
+	//攻撃状態の時は攻撃範囲を描画 
+	if (state == AttackLight)
+	{
+		//攻撃範囲のTransform
+		Transform rangeTransform = transform;
+		//攻撃範囲までの距離
+		VECTOR3 length = VECTOR3(0, 0.1f, attackLength);
+		//Y軸の回転行列
+		MATRIX4X4 rotY = XMMatrixRotationY(transform.rotation.y);
+
+		rangeTransform.scale *= attackRange;
+		rangeTransform.position += length * rotY;
+
+		//攻撃範囲の描画処理
+		rangeMesh->Render(rangeTransform.matrix());
+	}
+
+
 }
 
 EnemyBoss1* EnemySoldier::GetBoss()
@@ -32,10 +72,6 @@ EnemyBoss1* EnemySoldier::GetBoss()
 
 void EnemySoldier::UpdateNormal()
 {
-	
-
-	//アニメーションアップデート
-	animator->Update();
 	
 	//ボスが戦闘モードだったら
 	if (boss->GetState() == Fight)
@@ -70,8 +106,7 @@ void EnemySoldier::UpdateContact()
 	//ボスが存在していたら
 	if (boss) {
 		animator->MergePlay(Walk);
-		animator->Update();
-
+		
 		//ボスへ向かうベクトルを取得
 		VECTOR3 toBoss = (boss->Position() - this->Position());
 
@@ -88,7 +123,7 @@ void EnemySoldier::UpdateContact()
 			}
 			else
 			{
-				state = Fight;
+				//boss->state = Fight;
 			}
 		}
 		else
@@ -102,7 +137,63 @@ void EnemySoldier::UpdateContact()
 
 void EnemySoldier::UpdateFight()
 {
-	animator->Update();
+	
+	//Boidsアルゴリズムの処理
+	Boids();
+	
+	//プレイヤーとの距離が一定範囲内であれば攻撃をする 
+	if (toPlayer.Length() <= 2.0f)
+	{
+		if (coolCount <= 0)
+		{
+			state = AttackLight;
+		}
+	}
+
+	//動いていないなら、アニメーションをダンスにする
+	if (velo.Length() <= 0)
+	{
+		if (animator->PlayingID() != Dance)
+		{
+			animator->MergePlay(Dance);
+		}
+	}
+	else
+	{
+		//キャラクターが動いているときにアニメーションが歩いていなかったら歩かせる
+		if (animator->PlayingID() != Walk)
+		{
+			animator->MergePlay(Walk);
+		}
+	}
+	
+	
+	transform.rotation.y = atan2(velo.x, velo.z);
+	velo.y = 0;
+	transform.position += velo;
+
+}
+
+void EnemySoldier::UpdateAttackLight()
+{
+	//攻撃フレームの加算
+	attackFrame++;
+
+	//攻撃が終了したら
+	if (attackFrame >= attackFrameLight)
+	{
+		attackFrame = 0;
+
+		//クールタイムを設定する
+		coolCount = coolTime;
+		//ステートを戦闘状態に戻す
+		state = Fight;
+	}
+	
+}
+
+void EnemySoldier::Boids()
+{
 
 	if (reactionTime < reactionCount)
 	{
@@ -116,7 +207,7 @@ void EnemySoldier::UpdateFight()
 
 		float sight = 10;//視界
 		float volume = 0;		//視界内の個体数
-		
+
 		if ((boss->Position() - this->Position()).Length() < sight)
 		{
 			volume++;
@@ -173,29 +264,6 @@ void EnemySoldier::UpdateFight()
 
 		}
 
-		
-	}
-	
-	//動いていないなら、アニメーションをダンスにする
-	if (velo.Length() <= 0)
-	{
-		if (animator->PlayingID() != Dance)
-		{
-			animator->MergePlay(Dance);
-		}
-	}
-	else
-	{
-		//キャラクターが動いているときにアニメーションが歩いていなかったら歩かせる
-		if (animator->PlayingID() != Walk)
-		{
-			animator->MergePlay(Walk);
-		}
-	}
-	
-	
-	transform.rotation.y = atan2(velo.x, velo.z);
-	velo.y = 0;
-	transform.position += velo;
 
+	}
 }

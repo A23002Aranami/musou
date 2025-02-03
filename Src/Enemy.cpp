@@ -13,6 +13,8 @@ class Stage;
 Player* Enemy::player = nullptr; // 静的メンバ変数の定義
 
 CFbxMesh* Enemy::enemyMesh = nullptr;
+CFbxMesh* Enemy::rangeMesh = nullptr;
+
 Stage* Enemy::stage = nullptr;
 int Enemy::num = 0;
 
@@ -31,6 +33,9 @@ Enemy::Enemy():state(Normal),knockBackVelo(VECTOR3(0,0,0))
 		enemyMesh->LoadAnimation(Walk, "data/models/Enemy/Gob/Walk.anmx", true);
 		enemyMesh->LoadAnimation(Dance, "data/models/Enemy/Gob/Dance.anmx", true);
 
+		//攻撃範囲用のメッシュ
+		rangeMesh = new CFbxMesh();
+		rangeMesh->Load("data/models/Common/Range.mesh");
 	}
 	
 
@@ -80,6 +85,9 @@ void Enemy::Update()
 	//プレイヤーへ向かうベクトルを取得
 	toPlayer = player->Position() - this->Position();
 
+	//アニメーションのアップデート
+	animator->Update();
+
 	switch (state)
 	{
 	case Normal:			//通常状態
@@ -93,6 +101,9 @@ void Enemy::Update()
 		break;
 	case Fight:				//戦闘状態
 		UpdateFight();
+		break;
+	case AttackLight:		//攻撃状態
+		UpdateAttackLight();
 		break;
 	case KnockBack:			//ノックバック状態
 		UpdateKnockBack();
@@ -177,6 +188,10 @@ void Enemy::UpdateKnockBack()
 }
 
 void Enemy::UpdateChase()
+{
+}
+
+void Enemy::UpdateAttackLight()
 {
 }
 

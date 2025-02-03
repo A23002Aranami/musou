@@ -243,6 +243,7 @@ void Player::UpdateAttackLight()
 				{
 					//敵のステート
 					int eState = enemy->state;
+
 					//敵がノックバックしても死んでもいないとき
 					if ((eState != KnockBack) && (eState != Dead))
 					{
