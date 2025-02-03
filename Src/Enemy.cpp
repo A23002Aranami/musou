@@ -30,8 +30,9 @@ Enemy::Enemy():state(Normal),knockBackVelo(VECTOR3(0,0,0))
 	{
 		enemyMesh = new CFbxMesh();
 		enemyMesh->Load("data/models/Enemy/Gob/Gob.mesh");
-		enemyMesh->LoadAnimation(Walk, "data/models/Enemy/Gob/Walk.anmx", true);
-		enemyMesh->LoadAnimation(Dance, "data/models/Enemy/Gob/Dance.anmx", true);
+		enemyMesh->LoadAnimation(aWalk, "data/models/Enemy/Gob/Walk.anmx", true);
+		enemyMesh->LoadAnimation(aDance, "data/models/Enemy/Gob/Dance.anmx", true);
+		enemyMesh->LoadAnimation(aAttackLight, "data/models/Enemy/Gob/AttackLight.anmx", false);
 
 		//攻撃範囲用のメッシュ
 		rangeMesh = new CFbxMesh();
@@ -54,7 +55,7 @@ Enemy::Enemy():state(Normal),knockBackVelo(VECTOR3(0,0,0))
 
 	animator->SetModel(mesh);
 
-	animator->Play(Dance);
+	animator->Play(aDance);
 	//プレイスピードを等速で初期化
 	animator->SetPlaySpeed(1.0f);
 

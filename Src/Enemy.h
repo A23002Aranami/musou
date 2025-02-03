@@ -49,8 +49,9 @@ protected:
 	
 	enum Animation
 	{
-		Walk,
-		Dance,
+		aWalk,
+		aDance,
+		aAttackLight,
 	};
 
 	virtual void UpdateNormal();

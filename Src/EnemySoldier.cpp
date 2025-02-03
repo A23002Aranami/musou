@@ -94,7 +94,7 @@ void EnemySoldier::UpdateNormal()
 			if (ipF >= cosf(60.0f * DegToRad))
 			{
 				new ExclEffect(this);
-				animator->MergePlay(Walk);
+				animator->MergePlay(aWalk);
 				state = Contact;
 			}
 		}
@@ -105,7 +105,7 @@ void EnemySoldier::UpdateContact()
 {
 	//ボスが存在していたら
 	if (boss) {
-		animator->MergePlay(Walk);
+		animator->MergePlay(aWalk);
 		
 		//ボスへ向かうベクトルを取得
 		VECTOR3 toBoss = (boss->Position() - this->Position());
@@ -153,17 +153,17 @@ void EnemySoldier::UpdateFight()
 	//動いていないなら、アニメーションをダンスにする
 	if (velo.Length() <= 0)
 	{
-		if (animator->PlayingID() != Dance)
+		if (animator->PlayingID() != aDance)
 		{
-			animator->MergePlay(Dance);
+			animator->MergePlay(aDance);
 		}
 	}
 	else
 	{
 		//キャラクターが動いているときにアニメーションが歩いていなかったら歩かせる
-		if (animator->PlayingID() != Walk)
+		if (animator->PlayingID() != aWalk)
 		{
-			animator->MergePlay(Walk);
+			animator->MergePlay(aWalk);
 		}
 	}
 	
@@ -176,6 +176,12 @@ void EnemySoldier::UpdateFight()
 
 void EnemySoldier::UpdateAttackLight()
 {
+	//攻撃アニメーションを再生
+	if (animator->PlayingID() != aAttackLight)
+	{
+		animator->MergePlay(aAttackLight);
+	}
+	
 	//攻撃フレームの加算
 	attackFrame++;
 
