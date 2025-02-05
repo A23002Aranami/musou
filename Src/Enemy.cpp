@@ -14,6 +14,7 @@ Player* Enemy::player = nullptr; // 静的メンバ変数の定義
 
 CFbxMesh* Enemy::enemyMesh = nullptr;
 CFbxMesh* Enemy::rangeMesh = nullptr;
+CFbxMesh* Enemy::circleMesh = nullptr;
 
 Stage* Enemy::stage = nullptr;
 int Enemy::num = 0;
@@ -37,6 +38,8 @@ Enemy::Enemy():state(Normal),knockBackVelo(VECTOR3(0,0,0))
 		//攻撃範囲用のメッシュ
 		rangeMesh = new CFbxMesh();
 		rangeMesh->Load("data/models/Common/Range.mesh");
+		circleMesh = new CFbxMesh();
+		circleMesh->Load("data/models/Common/Circle.mesh");
 	}
 	
 

@@ -63,5 +63,6 @@ protected:
 
 	//UŒ‚”ÍˆÍ‚ÌƒƒbƒVƒ…
 	static CFbxMesh* rangeMesh;
+	static CFbxMesh* circleMesh;
 
 };

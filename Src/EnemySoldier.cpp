@@ -9,8 +9,8 @@ EnemySoldier::EnemySoldier(EnemyBoss1* vBoss):Enemy()
 	velo = VECTOR3(0, 0, 0);
 
 	attackFrame = 0;
-	startUpFrameLight = 60;
-	attackFrameLight = 120;
+	startUpFrameLight = 100;
+	attackFrameLight = 5;
 
 	//UŒ‚”ÍˆÍ‚Ì‰Šú‰»
 	attackLength = 1.0f;
@@ -52,11 +52,20 @@ void EnemySoldier::Draw()
 	//UŒ‚ó‘Ô‚Ì‚ÍUŒ‚”ÍˆÍ‚ğ•`‰æ 
 	if (state == AttackLight)
 	{
-		rangeTransform.scale = VECTOR3(1,1,1)*attackRange *  min(attackFrame / (float)startUpFrameLight, 1.0f);
-		rangeMesh->m_vDiffuse = VECTOR4(255,0,0,min(attackFrame/(float)startUpFrameLight,1.0f));
+		//•`‰æ‚Ég‚¤Š„‡
+		float drawRate = min(attackFrame / (float)startUpFrameLight, 1.0f);
+		drawRate = max(drawRate, 0.0f);
+
+		rangeTransform.scale = VECTOR3(1,1,1)*attackRange *  drawRate;
+		rangeMesh->m_vDiffuse = VECTOR4(255,0,0,drawRate);
 
 		//UŒ‚”ÍˆÍ‚Ì•`‰æˆ—
 		rangeMesh->Render(rangeTransform.matrix());
+
+		//UŒ‚”ÍˆÍ‚Ì˜g‚Ì•`‰æˆ—
+		rangeTransform.scale = VECTOR3(1, 1, 1) * attackRange;
+		circleMesh->m_vDiffuse = VECTOR4(255, 0, 0, 1.0f);
+		circleMesh->Render(rangeTransform.matrix());
 	}
 
 
@@ -135,8 +144,7 @@ void EnemySoldier::UpdateContact()
 void EnemySoldier::UpdateFight()
 {
 	
-	//BoidsƒAƒ‹ƒSƒŠƒYƒ€‚Ìˆ—
-	Boids();
+	
 	
 	//ƒvƒŒƒCƒ„[‚Æ‚Ì‹——£‚ªˆê’è”ÍˆÍ“à‚Å‚ ‚ê‚ÎUŒ‚‚ğ‚·‚é 
 	if (toPlayer.Length() <= 2.0f)
@@ -146,7 +154,11 @@ void EnemySoldier::UpdateFight()
 			state = AttackLight;
 		}
 	}
-
+	else//ˆê’è”ÍˆÍŠO‚Å‚ ‚ê‚ÎABoidsƒAƒ‹ƒSƒŠƒYƒ€‚ğÀs
+	{
+		//BoidsƒAƒ‹ƒSƒŠƒYƒ€‚Ìˆ—
+		Boids();
+	}
 	//“®‚¢‚Ä‚¢‚È‚¢‚È‚çAƒAƒjƒ[ƒVƒ‡ƒ“‚ğƒ_ƒ“ƒX‚É‚·‚é
 	if (velo.Length() <= 0)
 	{
@@ -176,18 +188,19 @@ void EnemySoldier::UpdateAttackLight()
 	//UŒ‚ƒtƒŒ[ƒ€‚Ì‰ÁZ
 	attackFrame++;
 
+	//UŒ‚”ÍˆÍ‚ÌTransform
+	rangeTransform = transform;
+	//UŒ‚”ÍˆÍ‚Ü‚Å‚Ì‹——£
+	VECTOR3 length = VECTOR3(0, 0.1f, attackLength);
+	//Y²‚Ì‰ñ“]s—ñ
+	MATRIX4X4 rotY = XMMatrixRotationY(transform.rotation.y);
+
+	rangeTransform.position = transform.position + (length * rotY);
+
+	float attackLength = (rangeTransform.position - player->Position()).Length();
+
 	if(startUpFrameLight < attackFrame && attackFrame <= startUpFrameLight + attackFrameLight) {
-		//UŒ‚”ÍˆÍ‚ÌTransform
-		rangeTransform = transform;
-		//UŒ‚”ÍˆÍ‚Ü‚Å‚Ì‹——£
-		VECTOR3 length = VECTOR3(0, 0.1f, attackLength);
-		//Y²‚Ì‰ñ“]s—ñ
-		MATRIX4X4 rotY = XMMatrixRotationY(transform.rotation.y);
-
-		rangeTransform.scale *= attackRange;
-		rangeTransform.position += length * rotY;
-
-		float attackLength = (rangeTransform.position - player->Position()).Length();
+		
 
 		if (attackLength < attackRange)
 		{
@@ -262,7 +275,8 @@ void EnemySoldier::Boids()
 
 					volume++;//ŒvZ‚·‚éŒÂ‘Ì”
 					avgPos += node->Position();
-					avgVelo += node->velo;
+					//‘¬“x‚ğ³‹K‰»‚µ‚½‚à‚Ì‚Ì•½‹Ï‚ğ‹‚ß‚é
+					avgVelo += XMVector3Normalize(node->velo);
 
 				}
 			}

@@ -34,7 +34,8 @@ Player::Player() :
 	sword = new CFbxMesh();
 	sword->Load("data/models/chara/Night/Sword.mesh");
 
-	new UiBarBase(&hpRate, VECTOR2(0, 0), VECTOR2(500, 20));
+	//HPÉoÅ[ê∂ê¨
+	new UiBarBase(&hpRate, VECTOR2(50, 50), VECTOR2(600, 10));
 
 }
 
@@ -49,8 +50,18 @@ Player::~Player()
 
 void Player::Damage(float damage)
 {
-	//HPÇå∏ÇÁÇ∑
-	hp -= damage;
+	if (state != Evasion)
+	{
+		//HPÇå∏ÇÁÇ∑
+		hp -= damage;
+
+		if (hp <= 0)//HPÇ™0à»â∫Ç…Ç»Ç¡ÇΩÇÁ
+		{
+			//HPÇ0Ç…Ç∑ÇÈ
+			hp = 0;
+			state = Dead;//éÄñSèÛë‘Ç÷ëJà⁄
+		}
+	}
 }
 
 void Player::Update()
