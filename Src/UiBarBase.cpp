@@ -1,9 +1,10 @@
 #include "UiBarBase.h"
 
-UiBarBase::UiBarBase(float* vRate, VECTOR2 vPosition, VECTOR2 vSize) :
+UiBarBase::UiBarBase(float* vRate, VECTOR2 vPosition, VECTOR2 vSize,DWORD vRgb) :
 	rate(vRate),
 	position(vPosition),
-	maxSize(vSize)
+	maxSize(vSize),
+	rgb(vRgb)
 {
 	//ï`âÊèáÇç≈å„Ç…
 	SetDrawOrder(-2000);
@@ -27,11 +28,11 @@ void UiBarBase::Draw()
 	//â°ÉQÅ[ÉW
 	if (maxSize.x > maxSize.y)
 	{
-		spr.DrawRect(position.x, position.y, maxSize.x * safetyRate, maxSize.y, RGB(255, 255, 0));
+		spr.DrawRect(position.x, position.y, maxSize.x * safetyRate, maxSize.y,rgb);
 	}
 	else//ècÉQÅ[ÉW
 	{
-		spr.DrawRect(position.x, position.y, maxSize.x , maxSize.y * safetyRate, RGB(255, 255, 0));
+		spr.DrawRect(position.x, position.y, maxSize.x , maxSize.y * safetyRate, rgb);
 	}
 	
 }

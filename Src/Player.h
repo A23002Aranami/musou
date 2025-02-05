@@ -52,6 +52,17 @@ private:
 	float maxHp;
 	float hpRate;
 
+	float stamina;
+	float maxStamina;
+	float staminaRate;
+
+	//スタミナ回復のクールタイム
+	float staminaCoolTime;
+	float staminaCoolCount;
+
+	//回避に必要なスタミナ
+	float evasionStamina;
+
 	State state;
 
 	//カメラクラス

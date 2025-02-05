@@ -17,6 +17,7 @@ CFbxMesh* Enemy::rangeMesh = nullptr;
 CFbxMesh* Enemy::circleMesh = nullptr;
 
 Stage* Enemy::stage = nullptr;
+
 int Enemy::num = 0;
 
 Enemy::Enemy():state(Normal),knockBackVelo(VECTOR3(0,0,0))
@@ -75,6 +76,8 @@ Enemy::~Enemy()
 	if (num == 1)//リソースがデリートされていないときデリートする
 	{
 		delete enemyMesh;//敵全体で共通のメッシュをデリート
+		delete rangeMesh;//攻撃範囲メッシュをデリート
+		delete circleMesh;//攻撃範囲メッシュをデリート
 		player = nullptr;//プレイヤーの共通ポインタをデリート
 		stage = nullptr;//ステージの共通ポインタをデリート
 	}
@@ -89,60 +92,67 @@ void Enemy::Update()
 	//プレイヤーへ向かうベクトルを取得
 	toPlayer = player->Position() - this->Position();
 
-	//アニメーションのアップデート
-	animator->Update();
+	//描画範囲内であるときのみ処理
+	if (toPlayer.Length() < ableLength) {
 
-	switch (state)
-	{
-	case Normal:			//通常状態
-		UpdateNormal();
-		break;
-	case Contact:			//接触状態
-		UpdateContact();
-		break;
-	case Chase:				//追跡状態
-		UpdateChase();
-		break;
-	case Fight:				//戦闘状態
-		UpdateFight();
-		break;
-	case AttackLight:		//攻撃状態
-		UpdateAttackLight();
-		break;
-	case KnockBack:			//ノックバック状態
-		UpdateKnockBack();
-		break;
-	case Dead:				//死亡状態
-		break;
-	default:				//その他
-		break;
-	}
+		//アニメーションのアップデート
+		animator->Update();
 
-	if ((this->state != Dead) && (this->state != KnockBack))
-	{
-		//すべてのボスのすべての配下とヒット判定
-		for (auto boss : *stage->GetBoss1())
+		switch (state)
 		{
-			for (auto node : *boss->GetFlock())
-			{
-				//対象が動ける状態であるとき
-				if ( (node->state != Dead) &&
-					 (node->state != KnockBack) &&
-					 (node->state != AttackLight)
-					)
-				{
-					auto toNode = node->Position() - this->Position();
-					auto length = toNode.Length();
+		case Normal:			//通常状態
+			UpdateNormal();
+			break;
+		case Contact:			//接触状態
+			UpdateContact();
+			break;
+		case Chase:				//追跡状態
+			UpdateChase();
+			break;
+		case Fight:				//戦闘状態
+			UpdateFight();
+			break;
+		case AttackLight:		//攻撃状態
+			UpdateAttackLight();
+			break;
+		case KnockBack:			//ノックバック状態
+			UpdateKnockBack();
+			break;
+		case Dead:				//死亡状態
+			break;
+		default:				//その他
+			break;
+		}
 
-					//距離が一定以下のとき
-					if (length < 1.0)
+		if ((this->state != Dead) && (this->state != KnockBack))
+		{
+			//すべてのボスのすべての配下とヒット判定
+			for (auto boss : *stage->GetBoss1())
+			{
+				for (auto node : *boss->GetFlock())
+				{
+					//対象が動ける状態であるとき
+					if ((node->state != Dead) &&
+						(node->state != KnockBack) &&
+						(node->state != AttackLight)
+						)
 					{
-						//当たった仲間を押し出す
-						toNode = XMVector3Normalize(toNode);
-						toNode.y = 0;
-						node->SetPosition(node->Position() + toNode * (1.0f - length));
+						auto toNode = node->Position() - this->Position();
+						auto length = toNode.Length();
+
+						//距離が一定以下のとき
+
+						float socialDistance = 1.5f;
+
+						if (length < socialDistance)
+						{
+							//当たった仲間を押し出す
+							toNode = XMVector3Normalize(toNode);
+							toNode.y = 0;
+							node->SetPosition(node->Position() + toNode * (socialDistance - length));
+						}
+
 					}
-					
 				}
 			}
 		}

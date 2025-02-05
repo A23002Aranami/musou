@@ -246,6 +246,7 @@ void CMain::MessageLoop()
 
 	while (msg.message != WM_QUIT && m_bLoopFlag)	// メッセージを取得している間繰り返す
 	{
+		DispFps();									// FPSの表示
 		m_pGMain->Update();
 		float timer = MainControl::RefreshTimer();
 		if (timer > 0.0f) {

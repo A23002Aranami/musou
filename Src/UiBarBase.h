@@ -11,7 +11,7 @@ public:
 	/// <param name="vRate">表示する割合</param>
 	/// <param name="size">描画サイズ</param>
 	/// <param name="dir">true:横バー,false:縦バー</param>
-	UiBarBase(float *vRate,VECTOR2 position,VECTOR2 size);
+	UiBarBase(float *vRate,VECTOR2 position,VECTOR2 size,DWORD vRgb = RGB(255,255,255));
 	virtual ~UiBarBase();
 
 	void Draw()override;
@@ -26,5 +26,8 @@ private:
 	VECTOR2 position;
 	//描画サイズ
 	VECTOR2 maxSize;
+
+	//色
+	DWORD rgb;
 
 };

@@ -2,6 +2,7 @@
 
 EnemySoldier::EnemySoldier(EnemyBoss1* vBoss):Enemy()
 {
+
 	reactionCount = 0;
 	reactionTime = Random(10,20);
 	state = Normal;
@@ -246,18 +247,19 @@ void EnemySoldier::Boids()
 		reactionTime = Random(10, 20);
 		reactionCount = 0;
 
+		//ƒXƒs[ƒh‚Ì‰Šú‰»
 		velo = VECTOR3();
 
 		VECTOR3 avgPos = VECTOR3();//W’c‚ÌˆÊ’u‚Ì•½‹Ï				(Œ‹‡—p)
 		VECTOR3 avgVelo = VECTOR3();//W’c‚Ì‘¬“x‚Ì•½‹Ï(Œü‚«A‘¬‚³)	(®—ñ—p)
 
-		float sight = 10;//Ž‹ŠE
+		float sight = 5;//Ž‹ŠE
 		float volume = 0;		//Ž‹ŠE“à‚ÌŒÂ‘Ì”
 
 		if ((boss->Position() - this->Position()).Length() < sight)
 		{
 			volume++;
-			avgPos += boss->Position();
+			//avgPos += boss->Position();
 			avgVelo += boss->GetVelo();
 		}
 
@@ -265,16 +267,19 @@ void EnemySoldier::Boids()
 		{
 
 			//“¯‚¶ƒ{ƒX‚ðŽ‚ÂŒQ‚ê‚ÌŽž
-			if (node->boss == boss && node->state == Contact)
+			if (node->boss == boss && node->state == Fight)
 			{
+
 				auto toNode = node->Position() - this->Position();
 				auto length = toNode.Length();
+
 				//Ž©•ª‚ÌŽüˆÍˆê’è”ÍˆÍ“à‚É‚¢‚½‚ç
 				if (length <= sight)
 				{
 
 					volume++;//ŒvŽZ‚·‚éŒÂ‘Ì”
 					avgPos += node->Position();
+					
 					//‘¬“x‚ð³‹K‰»‚µ‚½‚à‚Ì‚Ì•½‹Ï‚ð‹‚ß‚é
 					avgVelo += XMVector3Normalize(node->velo);
 

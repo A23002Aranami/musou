@@ -20,7 +20,10 @@ Player::Player() :
 	attackFrameLight(5),				//攻撃フレーム
 	attackKnockBackHeightLight(0.1f),	//ノックバックする高さ
 	hp(100),							//キャラクターのHP
-	maxHp(100)							//キャラクターのHP
+	maxHp(100),							//キャラクターのHP
+	stamina(100),						//キャラクターのスタミナ
+	maxStamina(100),					//キャラクターのスタミナ
+	evasionStamina(20)					//回避に必要なスタミナ
 {
 	//描画順を遅くする
 	ObjectManager::SetDrawOrder(this, -1000);
@@ -35,7 +38,8 @@ Player::Player() :
 	sword->Load("data/models/chara/Night/Sword.mesh");
 
 	//HPバー生成
-	new UiBarBase(&hpRate, VECTOR2(50, 50), VECTOR2(600, 10));
+	new UiBarBase(&hpRate, VECTOR2(50, 50), VECTOR2(600, 10),RGB(53,241,116));
+	new UiBarBase(&staminaRate, VECTOR2(50, 70), VECTOR2(600, 10), RGB(255, 255, 0));
 
 }
 
@@ -93,6 +97,11 @@ void Player::Update()
 
 	//HPの割合
 	hpRate = hp / maxHp;
+	//スタミナの割合
+	staminaRate = stamina / maxStamina;
+
+	//ToDo:スタミナの回復処理
+	stamina+=0.5;
 
 }
 
@@ -151,10 +160,17 @@ void Player::UpdateNormal()
 		
 		if (doubleTapCount <= doubleTapTime)//ダブルタップ時の処理
 		{
-			invincibleCount = 0;
-			animator->MergePlay(aRoll);
-			state = Evasion;
-			return;
+			if (stamina >= evasionStamina)
+			{
+				//スタミナを減らす
+				stamina -= evasionStamina;
+
+				//無敵時間のカウントをリセット
+				invincibleCount = 0;
+				animator->MergePlay(aRoll);
+				state = Evasion;
+				return;
+			}
 		}
 		else
 		{
