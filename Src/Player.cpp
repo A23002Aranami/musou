@@ -5,20 +5,22 @@
 #include "MoveTarget.h"
 #include "Lerp.h"
 #include "MeshCollider.h"
-
+#include "UiBarBase.h"
 
 Player::Player() :
-	cam(nullptr),					//カメラ
-	target(nullptr),				//移動先ターゲットc
-	doubleTapCount(10),				//ダブルタップ判定用カウント　
-	doubleTapTime(10),				//ダブルタップの許容時間
-	invincibleCount(0),				//無敵時間のカウント　
-	invincibleTime(60),				//無敵時間
-	countAttackFrame(0),			//攻撃発生からの総フレーム
-	attackRangeLight(3.0f),			//攻撃範囲(距離)
-	attackAngleLight(60.0f),		//攻撃範囲(角度)
-	attackFrameLight(5),			//攻撃フレーム
-	attackKnockBackHeightLight(0.1f)//ノックバックする高さ
+	cam(nullptr),						//カメラ
+	target(nullptr),					//移動先ターゲットc
+	doubleTapCount(10),					//ダブルタップ判定用カウント　
+	doubleTapTime(10),					//ダブルタップの許容時間
+	invincibleCount(0),					//無敵時間のカウント　
+	invincibleTime(60),					//無敵時間
+	countAttackFrame(0),				//攻撃発生からの総フレーム
+	attackRangeLight(3.0f),				//攻撃範囲(距離)
+	attackAngleLight(60.0f),			//攻撃範囲(角度)
+	attackFrameLight(5),				//攻撃フレーム
+	attackKnockBackHeightLight(0.1f),	//ノックバックする高さ
+	hp(100),							//キャラクターのHP
+	maxHp(100)							//キャラクターのHP
 {
 	//描画順を遅くする
 	ObjectManager::SetDrawOrder(this, -1000);
@@ -31,6 +33,9 @@ Player::Player() :
 	cursolImg = new CSpriteImage("data/images/ui/Cursol.png");
 	sword = new CFbxMesh();
 	sword->Load("data/models/chara/Night/Sword.mesh");
+
+	new UiBarBase(&hpRate, VECTOR2(0, 0), VECTOR2(500, 20));
+
 }
 
 Player::~Player()
@@ -40,6 +45,12 @@ Player::~Player()
 	SAFE_DELETE(sword);
 	SAFE_DELETE(animator);
 	GameDevice()->m_pDI->ShowMouseCursor(true);
+}
+
+void Player::Damage(float damage)
+{
+	//HPを減らす
+	hp -= damage;
 }
 
 void Player::Update()
@@ -68,6 +79,10 @@ void Player::Update()
 	}
 
 	animator->Update();
+
+	//HPの割合
+	hpRate = hp / maxHp;
+
 }
 
 void Player::Draw()

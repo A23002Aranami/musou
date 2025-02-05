@@ -27,12 +27,19 @@ protected:
 	float attackLength;
 	float attackRange;
 	
+	
 	//現在の攻撃フレーム
 	int attackFrame;
-	//弱攻撃のフレーム
+	
+	//弱攻撃の発生フレーム
+	int startUpFrameLight;
+
+	//弱攻撃の持続フレーム
 	int attackFrameLight;
 
 private:
 	//ボスのアドレス
 	EnemyBoss1* boss;
+
+	Transform rangeTransform;
 };

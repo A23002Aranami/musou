@@ -123,7 +123,10 @@ void Enemy::Update()
 			for (auto node : *boss->GetFlock())
 			{
 				//‘ÎÛ‚ª“®‚¯‚éó‘Ô‚Å‚ ‚é‚Æ‚«
-				if ((node->state != Dead) && (node->state != KnockBack))
+				if ( (node->state != Dead) &&
+					 (node->state != KnockBack) &&
+					 (node->state != AttackLight)
+					)
 				{
 					auto toNode = node->Position() - this->Position();
 					auto length = toNode.Length();

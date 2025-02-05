@@ -9,8 +9,8 @@ EnemySoldier::EnemySoldier(EnemyBoss1* vBoss):Enemy()
 	velo = VECTOR3(0, 0, 0);
 
 	attackFrame = 0;
-
-	attackFrameLight = 120.0f;
+	startUpFrameLight = 60;
+	attackFrameLight = 120;
 
 	//UŒ‚”ÍˆÍ‚Ì‰Šú‰»
 	attackLength = 1.0f;
@@ -21,6 +21,10 @@ EnemySoldier::EnemySoldier(EnemyBoss1* vBoss):Enemy()
 	coolCount = 0;
 
 	boss->AddFlock(this);
+
+	isHitAttack = false;
+
+	
 }
 
 EnemySoldier::~EnemySoldier()
@@ -48,15 +52,8 @@ void EnemySoldier::Draw()
 	//UŒ‚ó‘Ô‚Ì‚ÍUŒ‚”ÍˆÍ‚ğ•`‰æ 
 	if (state == AttackLight)
 	{
-		//UŒ‚”ÍˆÍ‚ÌTransform
-		Transform rangeTransform = transform;
-		//UŒ‚”ÍˆÍ‚Ü‚Å‚Ì‹——£
-		VECTOR3 length = VECTOR3(0, 0.1f, attackLength);
-		//Y²‚Ì‰ñ“]s—ñ
-		MATRIX4X4 rotY = XMMatrixRotationY(transform.rotation.y);
-
-		rangeTransform.scale *= attackRange;
-		rangeTransform.position += length * rotY;
+		rangeTransform.scale = VECTOR3(1,1,1)*attackRange *  min(attackFrame / (float)startUpFrameLight, 1.0f);
+		rangeMesh->m_vDiffuse = VECTOR4(255,0,0,min(attackFrame/(float)startUpFrameLight,1.0f));
 
 		//UŒ‚”ÍˆÍ‚Ì•`‰æˆ—
 		rangeMesh->Render(rangeTransform.matrix());
@@ -176,24 +173,54 @@ void EnemySoldier::UpdateFight()
 
 void EnemySoldier::UpdateAttackLight()
 {
+	//UŒ‚ƒtƒŒ[ƒ€‚Ì‰ÁZ
+	attackFrame++;
+
+	if(startUpFrameLight < attackFrame && attackFrame <= startUpFrameLight + attackFrameLight) {
+		//UŒ‚”ÍˆÍ‚ÌTransform
+		rangeTransform = transform;
+		//UŒ‚”ÍˆÍ‚Ü‚Å‚Ì‹——£
+		VECTOR3 length = VECTOR3(0, 0.1f, attackLength);
+		//Y²‚Ì‰ñ“]s—ñ
+		MATRIX4X4 rotY = XMMatrixRotationY(transform.rotation.y);
+
+		rangeTransform.scale *= attackRange;
+		rangeTransform.position += length * rotY;
+
+		float attackLength = (rangeTransform.position - player->Position()).Length();
+
+		if (attackLength < attackRange)
+		{
+			if (!isHitAttack)
+			{
+				player->Damage(5);
+				isHitAttack = true;
+			}
+		}
+
+	}
+
+
 	//UŒ‚ƒAƒjƒ[ƒVƒ‡ƒ“‚ğÄ¶
 	if (animator->PlayingID() != aAttackLight)
 	{
 		animator->MergePlay(aAttackLight);
 	}
 	
-	//UŒ‚ƒtƒŒ[ƒ€‚Ì‰ÁZ
-	attackFrame++;
-
+	
 	//UŒ‚‚ªI—¹‚µ‚½‚ç
-	if (attackFrame >= attackFrameLight)
+	if (animator->Finished())
 	{
 		attackFrame = 0;
 
 		//ƒN[ƒ‹ƒ^ƒCƒ€‚ğİ’è‚·‚é
 		coolCount = coolTime;
+
+		isHitAttack = false;
+
 		//ƒXƒe[ƒg‚ğí“¬ó‘Ô‚É–ß‚·
 		state = Fight;
+
 	}
 	
 }
@@ -236,6 +263,7 @@ void EnemySoldier::Boids()
 					volume++;//ŒvZ‚·‚éŒÂ‘Ì”
 					avgPos += node->Position();
 					avgVelo += node->velo;
+
 				}
 			}
 		}

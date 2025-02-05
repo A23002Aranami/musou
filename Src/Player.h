@@ -16,6 +16,9 @@ public:
 	Player();
 	virtual ~Player();
 
+	//UŒ‚‚³‚ê‚½‚Æ‚«‚Ìˆ—
+	void Damage(float damage);
+
 	void Update()override;
 	void Draw()override;
 	
@@ -45,6 +48,9 @@ private:
 	float time;
 	float count;
 
+	float hp;
+	float maxHp;
+	float hpRate;
 
 	State state;
 

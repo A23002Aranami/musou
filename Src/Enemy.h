@@ -27,7 +27,7 @@ public:
 
 protected:
 
-	
+	bool isHitAttack;
 
 	VECTOR3 velo;		//‘¬“x
 	VECTOR3 veloAverage;//‘S‘Ì‚Ì‘¬“x‚Ì•½‹Ï
