@@ -57,15 +57,17 @@ void EnemySoldier::Draw()
 		float drawRate = min(attackFrame / (float)startUpFrameLight, 1.0f);
 		drawRate = max(drawRate, 0.0f);
 
+	    
+
 		rangeTransform.scale = VECTOR3(1,1,1)*attackRange *  drawRate;
-		rangeMesh->m_vDiffuse = VECTOR4(255,0,0,drawRate);
+		rangeMesh->m_vDiffuse = VECTOR4(1,0.3,0,min(drawRate,0.8f));
 
 		//UŒ‚”ÍˆÍ‚Ì•`‰æˆ—
 		rangeMesh->Render(rangeTransform.matrix());
 
 		//UŒ‚”ÍˆÍ‚Ì˜g‚Ì•`‰æˆ—
 		rangeTransform.scale = VECTOR3(1, 1, 1) * attackRange;
-		circleMesh->m_vDiffuse = VECTOR4(255, 0, 0, 1.0f);
+		circleMesh->m_vDiffuse = VECTOR4(1, 0.1, 0, 1.0f);
 		circleMesh->Render(rangeTransform.matrix());
 	}
 
@@ -120,7 +122,7 @@ void EnemySoldier::UpdateContact()
 		if ((boss->GetState() != Fight) )//ƒ{ƒX‚ªí“¬ƒ‚[ƒh‚¶‚á‚È‚©‚Á‚½‚ç
 		{
 			//ƒ{ƒX‚Ö‚Ì‹——£‚ªˆê’èˆÈã‚Ì‚Æ‚«
-			if (toBoss.Length() > 2.0f)
+			if (toBoss.Length() > 3.5f)
 			{
 				//ƒ{ƒX‚ÖŒü‚©‚¤ƒxƒNƒgƒ‹‚ð³‹K‰»
 				toBoss = XMVector3Normalize(toBoss);
@@ -130,7 +132,7 @@ void EnemySoldier::UpdateContact()
 			}
 			else
 			{
-				//boss->state = Fight;
+				boss->state = Fight;
 			}
 		}
 		else

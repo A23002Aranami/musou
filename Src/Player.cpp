@@ -6,6 +6,7 @@
 #include "Lerp.h"
 #include "MeshCollider.h"
 #include "UiBarBase.h"
+#include "UIGameOver.h"
 
 Player::Player() :
 	cam(nullptr),						//カメラ
@@ -63,6 +64,8 @@ void Player::Damage(float damage)
 		{
 			//HPを0にする
 			hp = 0;
+			
+			new UIGameOver();
 			state = Dead;//死亡状態へ遷移
 		}
 	}
@@ -101,7 +104,10 @@ void Player::Update()
 	staminaRate = stamina / maxStamina;
 
 	//ToDo:スタミナの回復処理
-	stamina+=0.5;
+	stamina+=0.1;
+
+	//スタミナが上限を超えたら
+	if (stamina > maxStamina) stamina = maxStamina;
 
 }
 
