@@ -294,11 +294,13 @@ void EnemySoldier::Boids()
 			//個体数で割って平均を出す
 			avgVelo /= volume;
 			avgPos /= volume;
-			avgPos = XMVector3Normalize(avgPos);
 
-			VECTOR3 toAvgPos(XMVector3Normalize(avgPos - this->Position()) * 0.01);
+			//群れの中心へ向かうベクトル
+
+			VECTOR3 toAvgPos((avgPos -this->Position()) * 0.001);
+
 			//速度を求めたベクトルの合計にする
-			velo = (avgVelo * 1.5 + toAvgPos);
+			velo = (avgVelo * 1.0 + toAvgPos);
 			velo = XMVector3Normalize(velo);
 			velo *= 0.01;
 		}
